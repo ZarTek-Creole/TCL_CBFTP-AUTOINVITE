@@ -96,24 +96,24 @@ namespace eval ::cbftp_autoinvite {
             dict set RESSOURCE successes result ${WSDATA}
         } elseif { $WSCODE != "200" } {
             if {$WSCODE == 409} {
-                dict set RESSOURCE failures result "Conflict : Ressource déja existante (surement)"
+                dict set RESSOURCE failures result "Conflict : Resource already exists (likely)."
             } elseif {$WSCODE == 201} {
-                dict set RESSOURCE successes result "Created : Requête traitée avec succès et création d’un document."
+                dict set RESSOURCE successes result "Created : Request processed successfully and document created."
             } elseif {$WSCODE == 204} {
-                dict set RESSOURCE successes result "No Content : Requête traitée avec succès mais pas d’information à renvoyer."
+                dict set RESSOURCE successes result "No Content: Request processed successfully but no information to return."
             } elseif {$WSCODE == 400} {
-                dict set RESSOURCE failures result "Bad request : La syntaxe de la requête est erronée."
+                dict set RESSOURCE failures result "Bad request: The syntax of the request is incorrect."
             } elseif {$WSCODE == 401} {
             } elseif {$WSCODE == 403} {
-                dict set RESSOURCE failures result "Forbidden : Le serveur refuse d’exécuter la requête."
+                dict set RESSOURCE failures result "Forbidden: The server refuses to execute the request."
             } elseif {$WSCODE == 404} {
-                dict set RESSOURCE failures result "Not Found : La ressource demandée n’a pas été trouvée."
+                dict set RESSOURCE failures result "Not Found : Not Found: The requested resource was not found."
             } elseif {$WSCODE == 405} {
-                dict set RESSOURCE failures result "Method Not Allowed : La méthode utilisée n’est pas autorisée."
+                dict set RESSOURCE failures result "Method Not Allowed: The method used is not allowed."
             } elseif {$WSCODE == 500} {
-                dict set RESSOURCE failures result "Internal Server Error : Erreur interne du serveur."
+                dict set RESSOURCE failures result "Internal Server Error."
             } else {
-                dict set RESSOURCE failures result "Unknow Error : Code HTTP non géré."
+                dict set RESSOURCE failures result "Unknow Error : Unhandled HTTP code."
             }
         }
         return ${RESSOURCE}
