@@ -36,7 +36,7 @@ namespace eval ::cbftp_autoinvite {
             # Send an invite to the site
             send_invite $site_name
         } else {
-            putlog "[namespace current] :: Error: Invalid channel name or not found $CHANNAM"
+            putlog "[namespace current] :: Error: Invalid channel name or not found $CHANNAME"
         }
     }
     proc find_site { CHANNAME } {
