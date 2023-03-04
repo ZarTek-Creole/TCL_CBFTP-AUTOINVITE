@@ -14,21 +14,27 @@ namespace eval ::cbftp_autoinvite {
     # Initialize the api_ variable with the connection information
     # User should update these values with their own CBFTP connection information
     array set cb_api {
-        "HOST"      "localhost"
-        "PORT"      "55400"
-        "PASSWORD"  "bestpass"
+        "HOST"                  "localhost"
+        "PORT"                  "55400"
+        "PASSWORD"              "bestpass"
     }
 
     # Initialize the chan_info variable with the channel information
     # User should update this array with their own channel information
     array set chan_info {
-        "Your_CB_sitename"           {#chan1 #chan2}
+        "Your_CB_sitename"      {#chan1 #chan2}
     }
+    set ignoreBotlist   [list   \
+        "Botnickignored1"       \
+
+        ];
 
     bind need - "% invite" ::cbftp_autoinvite::invite
     bind need - "% key" ::cbftp_autoinvite::invite
 
     proc invite { CHANNAME args } {
+        variable ignoreBotlist
+        if {[lsearch -nocase ${ignoreBotlist} ${::botnick}] != -1} { return }
         putlog "Need $args on $CHANNAME try by [namespace current]"
         # Find the site name associated with the channel
         set site_name [find_site $CHANNAME]
