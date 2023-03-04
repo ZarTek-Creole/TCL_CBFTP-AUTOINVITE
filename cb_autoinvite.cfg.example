@@ -1,0 +1,23 @@
+# CBFTP Invite Bot Script
+# This script allows an Eggdrop bot to automatically invite itself to specific channels on CBFTP sites that it cannot join due to +i (invitation) or +k (key) modes.
+# Visit:  https://github.com/ZarTek-Creole/TCL_CBFTP-AUTOINVITE
+#
+# Configuration file
+
+# Initialize the api_ variable with the connection information
+# User should update these values with their own CBFTP connection information
+array set cb_api {
+  "HOST"                  "localhost"
+  "PORT"                  "55400"
+  "PASSWORD"              "bestpass"
+}
+
+# Initialize the chan_info variable with the channel information
+# User should update this array with their own channel information
+array set chan_info {
+  "Your_CB_sitename"      {#chan1 #chan2}
+}
+set ignoreBotlist   [list   \
+  "Botnickignored1"       \
+
+  ];
