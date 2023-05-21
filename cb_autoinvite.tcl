@@ -95,6 +95,7 @@ namespace eval ::cbftp_autoinvite {
       -headers  ${HEADERS}      \
       -query    ${BODY}         \
       -method    POST           \
+      -timeout    5000                \
       ];
     set WSDATA                  [http::data  $t]
     set WSCODE                  [http::ncode $t]
