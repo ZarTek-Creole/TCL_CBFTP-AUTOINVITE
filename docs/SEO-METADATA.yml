@@ -1,0 +1,61 @@
+project:
+  name: TCL CBFTP Auto-Invite
+  description: Eggdrop bot script for automatic CBFTP channel invitations via API, supports ZNC reconnection, +i/+k channel modes handling, and FTP scene automation
+  version: 1.0
+  language: TCL
+  
+keywords:
+  primary:
+    - CBFTP auto-invite
+    - Eggdrop IRC bot
+    - API-based invitations
+    - ZNC support
+    - FTP scene automation
+    - IRC channel bot
+    - CBFTP integration
+    - Auto-reconnect bot
+  
+  secondary:
+    - IRC bot script
+    - FTP client automation
+    - Channel mode handling
+    - Invite automation
+    - TCL script Eggdrop
+    - IRC automation
+    - CBFTP API
+    - Scene FTP bot
+    - Warez automation
+    - Channel management bot
+
+topics:
+  - api
+  - bot
+  - automation
+  - irc
+  - ftp
+  - znc
+  - scripts
+  - tcl
+  - scene
+  - eggdrop
+  - cbftp
+  - auto-invite
+  - channel-bot
+  - irc-bot
+  - warez
+
+requires:
+  - Eggdrop 1.6.x or higher
+  - TCL 8.5+
+  - CBFTP with HTTP API enabled
+  - http TCL package
+
+author:
+  name: ZarTek-Creole
+  github: https://github.com/ZarTek-Creole
+
+license: MIT
+
+repository:
+  url: https://github.com/ZarTek-Creole/TCL_CBFTP-AUTOINVITE
+  type: git
