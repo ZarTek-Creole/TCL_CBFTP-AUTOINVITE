@@ -1,4 +1,9 @@
 # CBFTP Invite Bot Script (English)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Language: TCL](https://img.shields.io/badge/Language-TCL-blue.svg)](https://www.tcl-lang.org/)
+[![Eggdrop](https://img.shields.io/badge/Eggdrop-Compatible-green.svg)](https://www.eggheads.org/)
+[![CBFTP](https://img.shields.io/badge/CBFTP-API-red.svg)](https://github.com/andnevar/cbftp)
 This script allows an Eggdrop bot to automatically invite itself to specific channels on CBFTP sites that it cannot join due to +i (invitation) or +k (key) modes.
 
 **Auto-invite from CBFTP API**
